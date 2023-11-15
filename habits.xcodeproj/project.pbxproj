@@ -11,6 +11,7 @@
 		DA647D822B04CD2E00E3C533 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647D812B04CD2E00E3C533 /* ContentView.swift */; };
 		DA647D842B04CD2F00E3C533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA647D832B04CD2F00E3C533 /* Assets.xcassets */; };
 		DA647D872B04CD2F00E3C533 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA647D862B04CD2F00E3C533 /* Preview Assets.xcassets */; };
+		DA647D902B04CE2900E3C533 /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647D8F2B04CE2900E3C533 /* HabitModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		DA647D812B04CD2E00E3C533 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DA647D832B04CD2F00E3C533 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA647D862B04CD2F00E3C533 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA647D8F2B04CE2900E3C533 /* HabitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				DA647D7F2B04CD2E00E3C533 /* habitsApp.swift */,
 				DA647D812B04CD2E00E3C533 /* ContentView.swift */,
+				DA647D8F2B04CE2900E3C533 /* HabitModel.swift */,
 				DA647D832B04CD2F00E3C533 /* Assets.xcassets */,
 				DA647D852B04CD2F00E3C533 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA647D902B04CE2900E3C533 /* HabitModel.swift in Sources */,
 				DA647D822B04CD2E00E3C533 /* ContentView.swift in Sources */,
 				DA647D802B04CD2E00E3C533 /* habitsApp.swift in Sources */,
 			);

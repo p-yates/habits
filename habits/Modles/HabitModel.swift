@@ -5,7 +5,7 @@
 //  Created by Paul Y on 2023-11-15.
 //
 
-import Foundation
+import SwiftUI
 import SwiftData
 
 @Model
@@ -18,7 +18,8 @@ class Habit {
     var goalUnits: String
     // var reminderTime:
     
-    init(name: String = "", details: String = "", icon: String = "", color: String = "", goalValue: Int = 1, goalUnits: String = "") {
+    
+    init(name: String = "", details: String = "", icon: String = "✔️", color: String = "", goalValue: Int = 1, goalUnits: String = "") {
         self.name = name
         self.details = details
         self.icon = icon

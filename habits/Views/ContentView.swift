@@ -19,13 +19,16 @@ struct ContentView: View {
                 ForEach(habits) { habit in
                     NavigationLink(value: habit) {
                         VStack(alignment: .leading) {
-                            Text(habit.name)
+                            HStack {
+                                Text(habit.icon)
+                                Text(habit.name)
+                            }
                         }
                     }
                 }
                 .onDelete(perform: deleteHabit)
             }
-            .navigationTitle("Habits")
+            .navigationTitle("Habits ✔️")
             .navigationDestination(for: Habit.self, destination: EditHabitView.init)
             .toolbar {
                 Button("Add habit", systemImage: "plus", action: addHabit)

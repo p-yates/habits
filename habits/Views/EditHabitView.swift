@@ -16,6 +16,7 @@ struct EditHabitView: View {
         Form {
             TextField("Name", text: $habit.name)
             TextField("Details", text: $habit.details)
+
         }
         .navigationTitle("Edit habit")
         .navigationBarTitleDisplayMode(.inline)

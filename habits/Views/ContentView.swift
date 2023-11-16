@@ -28,7 +28,7 @@ struct ContentView: View {
                 }
                 .onDelete(perform: deleteHabit)
             }
-            .navigationTitle("Habits ✔️")
+            .navigationTitle("Habits")
             .navigationDestination(for: Habit.self, destination: EditHabitView.init)
             .toolbar {
                 Button("Add habit", systemImage: "plus", action: addHabit)

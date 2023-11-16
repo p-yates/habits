@@ -18,8 +18,8 @@ struct EditHabitView: View {
             TextField("Details", text: $habit.details)
             TextField("Icon", text: $habit.icon)
                 //this should force opening an emoji picker really
-         //   TextField("Goal", text: $habit.goalValue)
             
+            Stepper("Enter goal value: \(habit.goalValue)", value: $habit.goalValue, in: 0...1000)
 
             TextField("Goal Units", text: $habit.goalUnits)
             DatePicker("Start Date", selection: $habit.startDate, displayedComponents: .date)

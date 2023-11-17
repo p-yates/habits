@@ -13,6 +13,7 @@
 		DA647D872B04CD2F00E3C533 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA647D862B04CD2F00E3C533 /* Preview Assets.xcassets */; };
 		DA647D902B04CE2900E3C533 /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647D8F2B04CE2900E3C533 /* HabitModel.swift */; };
 		DA647D942B04DF3D00E3C533 /* EditHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647D932B04DF3D00E3C533 /* EditHabitView.swift */; };
+		DA647D962B0628C500E3C533 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647D952B0628C500E3C533 /* HabitDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		DA647D862B04CD2F00E3C533 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA647D8F2B04CE2900E3C533 /* HabitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
 		DA647D932B04DF3D00E3C533 /* EditHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitView.swift; sourceTree = "<group>"; };
+		DA647D952B0628C500E3C533 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				DA647D932B04DF3D00E3C533 /* EditHabitView.swift */,
 				DA647D812B04CD2E00E3C533 /* ContentView.swift */,
+				DA647D952B0628C500E3C533 /* HabitDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA647D902B04CE2900E3C533 /* HabitModel.swift in Sources */,
+				DA647D962B0628C500E3C533 /* HabitDetailView.swift in Sources */,
 				DA647D822B04CD2E00E3C533 /* ContentView.swift in Sources */,
 				DA647D802B04CD2E00E3C533 /* habitsApp.swift in Sources */,
 				DA647D942B04DF3D00E3C533 /* EditHabitView.swift in Sources */,

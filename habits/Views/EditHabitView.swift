@@ -10,6 +10,7 @@ import SwiftData
 
 struct EditHabitView: View {
     @Bindable var habit: Habit
+    @Environment(\.modelContext) var modelContext
     
     var body: some View {
         
@@ -20,6 +21,7 @@ struct EditHabitView: View {
                 //this should force opening an emoji picker really
             
             Stepper("Enter goal value: \(habit.goalValue)", value: $habit.goalValue, in: 0...1000)
+            //this should be a free form number input really
 
             TextField("Goal Units", text: $habit.goalUnits)
             DatePicker("Start Date", selection: $habit.startDate, displayedComponents: .date)

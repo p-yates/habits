@@ -10,8 +10,10 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
+    var destination: (Habit) -> some View = HabitDetailView.init
     @Query var habits: [Habit]
     @State private var path = [Habit]()
+    @State private var showEdit = false
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -27,20 +29,31 @@ struct ContentView: View {
                     }
                 }
                 .onDelete(perform: deleteHabit)
+                .onAppear {
+                    showEdit = false
+                }
             }
             .navigationTitle("Habits")
-            .navigationDestination(for: Habit.self, destination: EditHabitView.init)
+            .navigationDestination(for: Habit.self, destination: { habit in
+                if showEdit {
+                    EditHabitView(habit: habit)
+                } else {
+                    HabitDetailView(habit: habit)
+                }
+            })
             .toolbar {
-                Button("Add habit", systemImage: "plus", action: addHabit)
+                Button("Add habit", systemImage: "plus") {
+                    addHabit()
+                }
             } //this should be in a tab bar later
         }
-        
     }
     
     func addHabit() {
         let habit = Habit()
         modelContext.insert(habit)
         path = [habit]
+        showEdit = true
     }
     
     func deleteHabit(_ indexSet: IndexSet) {

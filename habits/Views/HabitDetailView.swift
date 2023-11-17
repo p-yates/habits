@@ -12,15 +12,16 @@ struct HabitDetailView: View {
     @Bindable var habit: Habit
     
     var body: some View {
-        Text(habit.name)
+        Spacer()
         HStack {
             Text("Goal: \(habit.goalValue)")
             Text(habit.goalUnits)
-            
-            NavigationLink(destination: EditHabitView(habit: habit)) {
-                Text("Edit Habit")
             }
-        }
+        Spacer()
+        NavigationLink(destination: EditHabitView(habit: habit)) {
+            Text("Edit Habit")
+            
+        }.navigationTitle(Text("\(habit.name)"))
     }
 }
 

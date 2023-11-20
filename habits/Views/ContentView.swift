@@ -10,7 +10,6 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
-    var destination: (Habit) -> some View = HabitDetailView.init
     @Query var habits: [Habit]
     @State private var path = [Habit]()
     @State private var showEdit = false

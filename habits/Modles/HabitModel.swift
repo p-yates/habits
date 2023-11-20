@@ -18,10 +18,11 @@ class Habit {
     var goalUnits: String
     var startDate: Date
     var endDate: Date
+    var goalProgress: Int
     // var reminderTime:
     
     
-    init(name: String = "", details: String = "", icon: String = "✔️", color: String = "", goalValue: Int = 1, goalUnits: String = "", startDate: Date = .now, endDate: Date = .now) {
+    init(name: String = "", details: String = "", icon: String = "✔️", color: String = "", goalValue: Int = 10, goalUnits: String = "", startDate: Date = .now, endDate: Date = .now, goalProgress: Int = 1 ) {
         self.name = name
         self.details = details
         self.icon = icon
@@ -30,5 +31,6 @@ class Habit {
         self.goalUnits = goalUnits
         self.startDate = startDate
         self.endDate = endDate
+        self.goalProgress = goalProgress
     }
 }

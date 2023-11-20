@@ -14,6 +14,7 @@
 		DA647D902B04CE2900E3C533 /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647D8F2B04CE2900E3C533 /* HabitModel.swift */; };
 		DA647D942B04DF3D00E3C533 /* EditHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647D932B04DF3D00E3C533 /* EditHabitView.swift */; };
 		DA647D962B0628C500E3C533 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647D952B0628C500E3C533 /* HabitDetailView.swift */; };
+		DA647D982B0B8B4E00E3C533 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA647D972B0B8B4E00E3C533 /* CircularProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		DA647D8F2B04CE2900E3C533 /* HabitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
 		DA647D932B04DF3D00E3C533 /* EditHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitView.swift; sourceTree = "<group>"; };
 		DA647D952B0628C500E3C533 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
+		DA647D972B0B8B4E00E3C533 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		DA647D922B04CF3500E3C533 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DA647D972B0B8B4E00E3C533 /* CircularProgressBarView.swift */,
 				DA647D932B04DF3D00E3C533 /* EditHabitView.swift */,
 				DA647D812B04CD2E00E3C533 /* ContentView.swift */,
 				DA647D952B0628C500E3C533 /* HabitDetailView.swift */,
@@ -166,6 +169,7 @@
 				DA647D962B0628C500E3C533 /* HabitDetailView.swift in Sources */,
 				DA647D822B04CD2E00E3C533 /* ContentView.swift in Sources */,
 				DA647D802B04CD2E00E3C533 /* habitsApp.swift in Sources */,
+				DA647D982B0B8B4E00E3C533 /* CircularProgressBarView.swift in Sources */,
 				DA647D942B04DF3D00E3C533 /* EditHabitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

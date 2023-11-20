@@ -18,7 +18,7 @@ struct EditHabitView: View {
             TextField("Name", text: $habit.name)
             TextField("Details", text: $habit.details)
             TextField("Icon", text: $habit.icon)
-                //this should force opening an emoji picker really
+            //this should force opening an emoji picker really
             
             Stepper("Enter goal value: \(habit.goalValue)", value: $habit.goalValue, in: 0...1000)
             //this should be a free form number input really

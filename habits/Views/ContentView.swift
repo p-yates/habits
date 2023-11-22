@@ -26,6 +26,7 @@ struct ContentView: View {
                             }
                         }
                     }
+                    //.listRowBackground(habit.color) colour property is not set right so this doesn't work
                 }
                 .onDelete(perform: deleteHabit)
                 .onAppear {

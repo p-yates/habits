@@ -11,51 +11,78 @@ import SwiftData
 struct HabitDetailView: View {
     @Bindable var habit: Habit
     @State var progressToAdd: String = ""
+    @State private var showingAlert = false
+    @FocusState private var isTextFieldFocused: Bool
+
     
     var body: some View {
         Spacer()
         
         ZStack {
+            //this is the circular progress bar
             CircularProgressBarView(progress: (Double(habit.goalProgress)/Double(habit.goalValue)))
                 .padding(15)
+                .accessibilityLabel("Habit progress bar")
+                .accessibilityValue(String("Progress \(habit.goalProgress) out of \( habit.goalValue)"))
+
+            //display the progress numerically and allow user updates
             VStack{
-                HStack {
-                    Text("Goal: \(habit.goalValue)")
-                    Text(habit.goalUnits)
+                VStack{
+                    HStack {
+                        Text("\(habit.goalProgress)").contentTransition(.numericText())
+                        Text(habit.goalUnits)
+                    }
+                    .contentTransition(.numericText())
+                    Text("/ \(habit.goalValue)")
+                        .accessibilityLabel("Habit goal")
                 }
-                Text("Goal Progress: \(habit.goalProgress)")
+                .accessibilityElement()
+                .accessibilityLabel("Habit progress")
+                .accessibilityValue(String("Progress \(habit.goalProgress) out of \( habit.goalValue)"))
+                
                 Stepper("", value: $habit.goalProgress)
                     .frame(width: 100, height: 100)
+                    .accessibilityLabel("Update progress")
+
                 //NOT IDEAL - hard coded size, should make it dynamic
             }
         }
         
         //let the user update the progress by entering a number rather than using the stepper
-        Spacer()
-        
         HStack(spacing: 8) {
             TextField("Add progress", text: $progressToAdd)
                 .keyboardType(.numberPad)
+                .focused($isTextFieldFocused)
                 .frame(width: 100)
+
             Button ("add", action: addProgress)
                 .buttonStyle(.borderedProminent)
+                .accessibilityLabel("Add progress")
         }
         .padding(.horizontal)
+
         
         Spacer()
         NavigationLink(destination: EditHabitView(habit: habit)) {
             Text("Edit Habit")
-            
-        }.navigationTitle(Text("\(habit.name)"))
+        }
+        .navigationTitle(Text("\(habit.name)"))
+
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Negative vlaue enterd"), message: Text("Please enter a positive value"), dismissButton: .default(Text("Okay")))
+        }
+        
     }
-    
     
     func addProgress() {
         guard let progress = Int(progressToAdd) else { return }
-        habit.goalProgress += progress
+        if  progress > 0 {
+            habit.goalProgress += progress
+        } else {
+            showingAlert = true
+        }
+        isTextFieldFocused = false // Dismiss the keyboard
         progressToAdd = "" // Reset the input field
-        print(progress)
-        print(habit.goalProgress)
     }
     
 }

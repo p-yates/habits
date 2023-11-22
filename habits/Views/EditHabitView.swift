@@ -16,22 +16,24 @@ struct EditHabitView: View {
         
         Form {
             TextField("Name", text: $habit.name)
+                .accessibilityLabel("Habit Name")
             TextField("Details", text: $habit.details)
+                .accessibilityLabel("Habit Details")
             TextField("Icon", text: $habit.icon)
             //this should force opening an emoji picker really
-            
+                .accessibilityLabel("Habit Emoji Icon")
             Stepper("Enter goal value: \(habit.goalValue)", value: $habit.goalValue, in: 0...1000)
-            //this should be a free form number input really
-
+                .accessibilityLabel("Input Habit progress")
             TextField("Goal Units", text: $habit.goalUnits)
+                .accessibilityLabel("Habit goal units")
             DatePicker("Start Date", selection: $habit.startDate, displayedComponents: .date)
+                .accessibilityLabel("Habit Start Date")
             DatePicker("End Date", selection: $habit.endDate, displayedComponents: .date)
-
+                .accessibilityLabel("Habit End Date")
         }
         .navigationTitle("Edit habit")
         .navigationBarTitleDisplayMode(.inline)
     }
-
 }
 
 

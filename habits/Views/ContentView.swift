@@ -23,11 +23,17 @@ struct ContentView: View {
                             HStack {
                                 Text(habit.icon)
                                 Text(habit.name)
+                                Spacer ()
+                                Text("\(habit.goalProgress) / \(habit.goalValue) \(habit.goalUnits) ")
                             }
                         }
+
+
                     }
                     //.listRowBackground(habit.color) colour property is not set right so this doesn't work
+                    .listRowBackground(habit.goalProgress >= habit.goalValue ? Color.green.opacity(0.2) : Color.clear)
                 }
+                
                 .onDelete(perform: deleteHabit)
                 .onAppear {
                     showEdit = false
